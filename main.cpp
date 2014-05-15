@@ -126,9 +126,9 @@ int __cdecl main(int argc, char** argv)
 
     //SIMULATE("ID:C:\\Users\\Natka\\AppData\\Local\\IBM\\Notes\\Data\\nike_neosoft.id");
     //SIMULATE("PASS:xxxxxxx");
-	SIMULATE("DB:Domino/NeoSoft!!mail\\redko.nsf");
-	SIMULATE("FOLDER:($Inbox)");
-	SIMULATE("FOLDER:($Drafts)");
+	//SIMULATE("DB:Domino/NeoSoft!!mail\\redko.nsf");
+	//SIMULATE("FOLDER:($Inbox)");
+	//SIMULATE("FOLDER:($Drafts)");
 	//SIMULATE("DOC:8c2d6");
 	//SIMULATE("UNREAD:8c2d6");
 	//SIMULATE("DOC:8c2d6");
