@@ -52,8 +52,8 @@ int __cdecl main(int argc, char** argv)
     if (FindWindow(NULL, TITLE))
         return 1;
     SetConsoleTitle(TITLE);
-	if (argc == 1)
-		ShowWindow(GetConsoleWindow(), SW_HIDE);
+    if (argc == 1)
+        ShowWindow(GetConsoleWindow(), SW_HIDE);
 
     if (0 != NotesInitExtended(0, NULL))
     {
@@ -126,13 +126,13 @@ int __cdecl main(int argc, char** argv)
 
     //SIMULATE("ID:C:\\Users\\Natka\\AppData\\Local\\IBM\\Notes\\Data\\nike_neosoft.id");
     //SIMULATE("PASS:xxxxxxx");
-	//SIMULATE("DB:Domino/NeoSoft!!mail\\redko.nsf");
-	//SIMULATE("FOLDER:($Inbox)");
-	//SIMULATE("FOLDER:($Drafts)");
-	//SIMULATE("DOC:8c2d6");
-	//SIMULATE("UNREAD:8c2d6");
-	//SIMULATE("DOC:8c2d6");
-	//SIMULATE("DOC:0x8C35E");
+    //SIMULATE("DB:Domino/NeoSoft!!mail\\redko.nsf");
+    //SIMULATE("FOLDER:($Inbox)");
+    //SIMULATE("FOLDER:($Drafts)");
+    //SIMULATE("DOC:8c2d6");
+    //SIMULATE("UNREAD:8c2d6");
+    //SIMULATE("DOC:8c2d6");
+    //SIMULATE("DOC:0x8C35E");
 
     // Receive until the peer shuts down the connection
     do {
@@ -140,10 +140,10 @@ int __cdecl main(int argc, char** argv)
         iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
         if (iResult > 0) {
             recvbuf[iResult] = 0;
-			if (0 == _strnicmp(recvbuf, "PASS:", 5))
-				printf("Recv: PASS: *******");
-			else
-				printf("Recv: %s\n", recvbuf);
+            if (0 == _strnicmp(recvbuf, "PASS:", 5))
+                printf("Recv: PASS: *******");
+            else
+                printf("Recv: %s\n", recvbuf);
             
             //here goes our processing
             Process(recvbuf, outbuf);
